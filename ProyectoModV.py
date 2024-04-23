@@ -47,7 +47,7 @@ scatter_trace = go.Scatter(
 
 # Creación de la salida
 layout = go.Layout(
-    title='Documentos académicos LGBTQ+ por año. <br>Fuente: Scopus (240416).',
+    title='Documentos académicos LGBTQ+ por año. <br>Fuente: Scopus (240417).',
     xaxis=dict(title='Año'),
     yaxis=dict(title='Documentos'),
     annotations=[
@@ -208,7 +208,7 @@ scatter_trace5 = go.Scatter(
 
 # Creación de la salida
 layout = go.Layout(
-    title='Documentos académicos LGBTQ+ por fuente (journal). <br>Fuente: Scopus (240416).',
+    title='Documentos académicos LGBTQ+ por fuente (journal). <br>Fuente: Scopus (240417).',
     xaxis=dict(title='Año'),
     yaxis=dict(title='Documentos'),
 )
