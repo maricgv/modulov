@@ -15,7 +15,7 @@ st.markdown('##### Alumna: *María del Carmen González Videgaray*')
 # Barra lateral
 
 with st.sidebar:
-    st.image("bandera.png")
+    st.image("Bandera.png")
     st.write("En este dashboard se muestran los resultados de una búsqueda en la base de datos Scopus realizada el 17 de abril 2024, con el tópico LGBTQ+")
 
 
