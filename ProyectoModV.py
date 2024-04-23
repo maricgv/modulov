@@ -20,7 +20,8 @@ with st.sidebar:
     st.markdown("#### Insights:")
     st.markdown("* Alto crecimiento a partir de 2015")
     st.markdown("* Preponderancia de países sajones")
-    st.markdown("* Destacan el área de Ciencias Sociales y Medicina")
+    st.markdown("* Destacan las áreas de Ciencias Sociales y Medicina")
+    st.markdown("* La mayoría de documentos son del Journal of Homosexuality")
 
 
 # Lectura de datos
