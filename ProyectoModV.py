@@ -9,7 +9,7 @@ import plotly.io as pio
 
 # Título de la aplicación y autoras
 st.title('LGBTQ+ EN EL MUNDO')
-st.markdown("#### Profesora: Jésica Edith Tapia Reyes")
+st.markdown("#### Profesora: Dra. Jésica Edith Tapia Reyes")
 st.markdown('##### Alumna: *María del Carmen González Videgaray*')
 
 # Barra lateral
