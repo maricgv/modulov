@@ -7,7 +7,7 @@ import numpy as np
 import plotly.graph_objs as go
 import plotly.io as pio
 
-# Título de la aplicación
+# Título de la aplicación y autoras
 st.title('LGBTQ+ EN EL MUNDO')
 st.markdown("#### Prof. Jésica Edith Tapia Reyes")
 st.markdown('##### Alumna: *María del Carmen González Videgaray*')
@@ -23,7 +23,7 @@ with st.sidebar:
     st.markdown("* Destacan las áreas de Ciencias Sociales y Medicina")
     st.markdown("* La mayoría de documentos son del Journal of Homosexuality")
 
-
+# GRÁFICO 1 - DOCUMENTOS POR AÑO
 # Lectura de datos
 data = pd.read_csv("Scopus-10-Analyze-Year.csv")
 x_values = data["Año"]
@@ -37,7 +37,7 @@ line_trace = go.Scatter(
     name='Tendencia'
 )
 
-# Se crea la línea de serie de tiempo
+# Se crean los puntos
 scatter_trace = go.Scatter(
     x=x_values,
     y=y_values,
@@ -66,50 +66,56 @@ layout = go.Layout(
 # Se crea la figura
 fig = go.Figure(data=[line_trace,scatter_trace], layout=layout)
 
-# Se muestra en el cuaderno
+# Se muestra en streamlit
 st.plotly_chart(fig)
 
+# GRÁFICO 2: DOCUMENTOS POR PAÍS
 
-# Simulated data
+# Lectura de datos
 data = pd.read_csv("Scopus-10-Analyze-Country2.csv")
 categories = data["País"]
 values = data["Documentos"]
 
-# Create a bar trace
+# Se crea la gráfica de barras
 trace = go.Bar(
     x=categories,
     y=values,
-    marker=dict(color='purple')  # Customizing bar color
+    marker=dict(color='purple')  # Se cambia el color
 )
 
-# Create layout
+# Se crea la salida
 layout = go.Layout(
     title='Los diez países con mayor número de documentos académicos LGBTQ+.<br>Fuente: Scopus (240417).',
     xaxis=dict(title='Países'),
     yaxis=dict(title='Documentos')
 )
 
-# Create figure
+# Se cea la figura
 fig = go.Figure(data=[trace], layout=layout)
 
-# Show the plot in Jupyter Notebook
+# Se muestra la figura en streamlit
 st.plotly_chart(fig)
 
-# Sample data
+# GRÁFICO 3: DOCUMENTOS POR ÁREA
+
+# Lectura de datos
 data = pd.read_csv("Scopus-10-Analyze-Subject2.csv")
 labels = data["Área"]
 values = data["Documentos"]
 
-# Creating the pie chart
+# Se crea el gráfico de anillos
 fig = go.Figure(data=[go.Pie(labels=labels, values=values, hole=0.3)])
 
-# Customizing layout
+# Se personaliza la salida
 fig.update_layout(
     title_text="Documentos LGBTQ+ por área de conocimiento. <br>Fuente: Scopus (240417)",
     annotations=[dict(text='Total', x=0.5, y=0.5, font_size=20, showarrow=False)]
 )
 
+# Se muestra la figura en streamlit
 st.plotly_chart(fig)
+
+# GRÁFICO 4: DOCUMENTOS POR FUENTE (Journal)
 
 # Lectura de datos
 data = pd.read_csv("Scopus-10-Analyze-SourceRev.csv")
@@ -215,6 +221,6 @@ fig = go.Figure(data=[line_trace1,scatter_trace1,
                       line_trace5,scatter_trace5], layout=layout)
 
 
-# Se muestra en el cuaderno
+# Se muestra en streamlit
 st.plotly_chart(fig)
     
