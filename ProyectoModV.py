@@ -18,6 +18,9 @@ with st.sidebar:
     st.image("Bandera.png")
     st.write("En este dashboard se muestran los resultados de una búsqueda en la base de datos Scopus realizada el 17 de abril 2024, con el tópico LGBTQ+.")
     st.markdown("#### Insights:")
+    st.markdown("* Alto crecimiento a partir de 2015")
+    st.markdown("* Preponderancia de países sajones")
+    st.markdown("* Destacan el área de Ciencias Sociales y Medicina")
 
 
 # Lectura de datos
